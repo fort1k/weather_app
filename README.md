@@ -1,1 +1,4 @@
-# weather_app
+🌦️ Weather Alert System
+
+📜 License
+MIT
