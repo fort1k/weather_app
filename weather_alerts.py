@@ -11,17 +11,16 @@ load_dotenv()
 
 
 def get_recipients():
-    """Parse recipients from .env"""
     try:
-        recipients = ast.literal_eval(os.getenv("RECIPIENTS"))
+        recipients_str = os.getenv("RECIPIENTS").replace('\n', '')
         return [{
             'name': r.split('|')[0],
             'email': r.split('|')[1],
             'city': r.split('|')[2],
             'country': r.split('|')[3]
-        } for r in recipients]
+        } for r in ast.literal_eval(recipients_str)]
     except Exception as e:
-        print(f"⚠️ Error parsing recipients: {e}")
+        print(f"Error parsing recipients: {e}")
         return []
 
 
