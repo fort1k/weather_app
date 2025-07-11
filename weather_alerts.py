@@ -109,6 +109,7 @@ def send_alert(recipient, weather):
         with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
             server.login(os.getenv('SENDER_EMAIL'), os.getenv('SENDER_PASSWORD'))
             server.send_message(msg)
+        print(f"✅ Email sent to {recipient['email']}")
         return True
     except Exception as e:
         print(f"Email failed: {e}")
