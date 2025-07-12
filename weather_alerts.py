@@ -92,6 +92,23 @@ def send_alert(recipient, weather):
                 <tr><td>👁️ Visibility</td><td>{weather['visibility']}</td></tr>
             </table>
         </div>
+        <footer>
+            <p>
+                This service is still under contruction, mzlt nrk7 fil automation part.
+            </p>
+            <p> Created by Akrem Hamdi
+                <ul>
+                    <li>
+                        insta : @fort1k_v
+                    </li>
+                    <li>
+                        tg : @fort1k_v
+                    </li>
+                </ul>
+                
+                
+            </p>
+        </footer>
     </body>
     </html>
     """
